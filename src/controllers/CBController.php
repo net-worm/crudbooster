@@ -1359,7 +1359,6 @@ class CBController extends Controller
                 $childtablePK = CB::pk($childtable);
 
                 for ($i = 0; $i <= $count_input_data; $i++) {
-
                     $column_data = [];
                     foreach ($columns as $col) {
                         $colname = $col['name'];
@@ -1373,9 +1372,7 @@ class CBController extends Controller
                         $lastId++;
                     }
                 }
-
                 $child_array = array_reverse($child_array);
-
                 DB::table($childtable)->insert($child_array);
             }
         }
